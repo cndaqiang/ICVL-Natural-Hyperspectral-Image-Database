@@ -1,6 +1,6 @@
 # 提取所有.mat、.raw、.hdr 文件的链接
 links=$(grep -oP '(?<=href=")[^"]*(\.mat|\.raw|\.hdr|\.jpg)(?=")' source.html)
-links=$(grep -oP '(?<=href=")[^"]*(\.mat|\.raw|\.hdr|\.jpg)(?=")' source2.html | tail -20)
+links=$(grep -oP '(?<=href=")[^"]*(\.mat|\.raw|\.hdr|\.jpg|\.png)(?=")' source2.html | tail -20)
 
 # 下载文件
 echo > filelist.txt
